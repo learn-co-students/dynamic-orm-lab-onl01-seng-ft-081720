@@ -60,16 +60,7 @@ class InteractiveRecord
         sql = "SELECT * FROM #{self.table_name} WHERE #{arr[0].to_s} = ?"
         DB[:conn].execute(sql, arr[1])
     end
-    # def self.find_by(attribute)
-    #     column_name = attribute.keys[0].to_s
-    #     value_name = attribute.values[0]
-    #     sql = <<-SQL
-    #       SELECT * 
-    #       FROM #{table_name}
-    #       WHERE #{column_name} = ?
-    #       SQL
-    #     DB[:conn].execute(sql, value_name);
-    # end
+    
 end
 
 # self.class.method => calls a class method on the instance
